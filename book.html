@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+<div class="banner">
+    <div class="profile-pic"></div>
+    <h2>Book an Appointment</h2>
+</div>
+
+<br><br><br>
+
+<div class="booking-container">
+    <div class="about-us">
+        <center>
+            <form id="booking-form" action="/book" method="POST">
+                <div class="form-group">
+                    <label for="date-time">Select Date and Time:</label>
+                    <input type="text" id="date-time" name="date_time" class="form-control" placeholder="Choose date and time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="option">Choose an Option:</label>
+                    <select id="option" name="option" class="form-control" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Option 1">Option 1</option>
+                        <option value="Option 2">Option 2</option>
+                        <option value="Option 3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </center>
+    </div>
+</div>
+
+
+<!-- Include Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr("#date-time", {
+        enableTime: true,
+        time_24hr: true, 
+        dateFormat: "Y-m-d H:i",
+    });
+</script>
+
+</body>
+</html>

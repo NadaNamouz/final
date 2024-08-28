@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" lang="arabic">
+    <title>Interior design by nisreen</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="profile-pic"></div>
+        <h2>Nisreen Namouz</h2>
+        <h3>Interior designer</h3>
+
+        <!-- Language Selector -->
+        <div class="language-selector" style="align-items: flex-start;">
+            <label for="language">Language:</label>
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="arabic">العربية</option>
+                <option value="english" selected>English</option>
+                <option value="hebrew">עברית</option>
+            </select>
+        </div>
+        
+    </div>
+
+   <!-- socials -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/nisreeninteriors?igsh=enV6dnA4bHY2aDQ3" target="_blank">
+            <img src="assets/icons/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/NISREENNAMOUZ?mibextid=ZbWKwL" target="_blank">
+            <img src="assets/icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://wa.me/+972506939903" target="_blank">
+            <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="tel:+972506939903">
+            <img src="assets/icons/telephone.png" alt="Phone">
+        </a>
+        <a href="#working-hours">
+            <img src="assets/icons/clock.png" alt="Website">
+        </a>
+        <a href="https://waze.com/ul?ll=32.825722,35.187389&navigate=yes" target="_blank">
+            <img src="assets/icons/location.png" alt="Location on Waze">
+        </a>    
+    </div>
+
+    <!-- about us -->
+    <div class="about-us" style="text-align: center;">
+        <center><h2>About me</h2></center>
+        <p>My name is Nasreen Namuz and I am an interior designer</p>
+        <p>The stories that are woven in my studio are not about the houses that are designed - but about the connection between people, their personalities and the spaces they want to live in. </p>
+        <p>The process invested in getting to know my customers, their experiences and preferences, is the one that ultimately produces a customized and unforgettable experience for every space!</p>
+        <p>My studio opened in 2017</p>
+        <p>During this period, I managed to work in front of a special amount of people, make them excited, and feel that they have fulfilled their dreams...</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <center><h2>Projects</h2></center>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="office.html">
+                    <img src="assets/images/elias_abu_elzalaf/cover.jpg" alt="Image 1">
+                    <div class="overlay-text">Oak office <br> Law office revonation and design</div><br>
+                    
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="jozeen_family.html">
+                    <img src="assets/images/jozeen_family/img6.png" alt="Image 2">
+                    <div class="overlay-text">House on the hill</div><br>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="zedan_kitchen.html">
+                    <img src="assets/images/zedan_kitchen/cover.png" alt="Image 3">
+                    <div class="overlay-text">Zeedan kitchen</div><br>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="abeer.html">
+                    <img src="assets/images/abeer/img4.jpeg" alt="Image 4">
+                    <div class="overlay-text">The happy colorfull house</div><br>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="daeem_family.html">
+                    <img src="assets/images/daeem_family/cover.jpg" alt="Image 4">
+                    <div class="overlay-text">Firey house</div><br>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="kitchens.html">
+                    <img src="assets/images/kitchens/img13.png" alt="Image 4">  
+                    <div class="overlay-text">Kitchens</div><br>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKING HOURS -->
+    <div id="working-hours">
+        <center>
+            <div>
+                <h2>Working hours</h2>
+                <div>
+                    <h3>monday - friday:</h3>
+                    <h4>9:00 - 15:00</h4>
+                </div>
+                <div>
+                    <h3>saturday - sunday: </h3>
+                    <h4>closed</h4>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <!-- Share my card -->
+    <div>
+        <center><h2>Share my card</h2></center>
+        <div class="social-icons">
+            <a  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyourwebsite.com" target="_blank">
+                <img src="assets/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20amazing%20website:%20https%3A%2F%2Fyourwebsite.com" target="_blank">
+                <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="contact-form" style="text-align: center;">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="full name" required>
+            <input type="text" name="phone" placeholder="phone number" required>
+            <textarea name="message" rows="5" placeholder="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <!--   ---------   -->
+
+    <script>
+        // Add jump animation on social icons click
+        document.querySelectorAll('.social-icons a').forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                icon.classList.add('jump');
+                setTimeout(function() {
+                    icon.classList.remove('jump');
+                }, 500);
+            });
+        });
+
+        function changeLanguage(language) {
+            if (language === 'english') {
+                window.location.href = "english.html";
+            } else if (language === 'hebrew') {
+                window.location.href = "hebrew.html"; 
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+
+        // CSS for jump animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .jump {
+                animation: jump 0.5s;
+            }
+            @keyframes jump {
+                0% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

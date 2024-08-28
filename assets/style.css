@@ -1,0 +1,360 @@
+body {
+    color: #333333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in width and height */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: 18px;
+}
+
+/* BANNER */
+.banner {
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('../assets/images/nada/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.banner .profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-image: url('../assets/images/personal/pfp.jpeg');
+    background-size: cover;
+    margin: 0 auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner h2, .banner h3 {
+    margin-top: 20px;
+    color: #333333; 
+}
+
+.language-selector {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    padding: 5px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector select {
+    border: none; 
+    background: none; 
+    font-size: 14px; 
+    cursor: pointer; 
+}
+
+/* SOCIALS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 30px;
+}
+
+.social-icons a {
+    width: 65px;
+    height: 65px;
+    margin: 0 20px;
+    border-radius: 50%;
+    background-color: #DFBAB2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.social-icons a img {
+    width: 30px; 
+    height: 30px; 
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* ABOUT, GALLERY, WORKING HOURS, CONTACT */
+.about-us, .gallery, .working-hours, .contact-form {
+    padding: 50px;
+    background-color: #FFFFFF;
+    margin: 20px 0;
+}
+
+.contact-form input[type="text"],textarea,button {
+    border-radius: 1cqw;
+    border: 0px;
+}
+
+/* GALLERY */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: calc(33.33% - 20px); 
+    height: 350px; 
+    position: relative; /* Position relative to enable absolute positioning for pseudo-elements */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gallery-item::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.2)
+    ); 
+    z-index: 1; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative; 
+    z-index: 0; 
+}
+
+.overlay-text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #ffffff;
+    font-size: 30px;
+    padding: 10px; 
+    text-align: center; 
+    width: 90%; 
+    z-index: 2; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); 
+}
+
+
+/* WORKING HOURS */
+.working-hours table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.working-hours th, .working-hours td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* CONTACT */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #E0DFDD;
+    color: #333333;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #C5958B;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #DFBAB2;
+}
+
+/* SHARE */
+.share-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* BOOKING */
+.booking-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #E8C7C0; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+label {
+    color: #333; 
+    font-weight: bold;
+}
+
+/* Input and select styling */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; 
+    box-sizing: border-box;
+}
+
+/* Textarea styling */
+textarea.form-control {
+    resize: none;
+}
+
+/* Button styling */
+.btn {
+    background-color: #DFBAB2;
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #F5DFD9;
+}
+
+.flatpickr-day.selected {
+    background-color: #DFBAB2 !important;
+    border-color: #DFBAB2 !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .gallery-item {
+        width: calc(50% - 20px); /* Adjust width for larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 30px 0;
+    }
+
+    .banner .profile-pic {
+        width: 130px;
+        height: 130px;
+    }
+
+    .gallery-item {
+        width: calc(50% - 20px); /* Adjust width for medium screens */
+        height: 300px; /* Adjust height for medium screens */
+    }
+
+    .language-selector {
+        top: 15px;
+        left: 15px;
+    }
+
+    .social-icons a {
+        width: 55px;
+        height: 55px;
+    }
+
+    .social-icons a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .about-us, .gallery, .working-hours, .contact-form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 20px 0;
+    }
+
+    .banner .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gallery-item {
+        width: 100%; /* Full width for small screens */
+        height: 250px; /* Adjust height for small screens */
+    }
+
+    .social-icons {
+        margin: 20px 0;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        width: 70px;
+        height: 70px;
+        margin: 0 10px;
+    }
+
+    .social-icons a:hover {
+        transition: none;
+    }
+
+    .social-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .about-us, .gallery, .working-hours, .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    .contact-form button {
+        padding: 8px;
+    }
+
+    .overlay-text {
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        color: #ffffff;
+        font-size: 25px;
+        padding: 10px; 
+        text-align: center; 
+        width: 90%; 
+        z-index: 2; 
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+}

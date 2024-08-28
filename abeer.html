@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy colorful house</title>
+    <link rel="stylesheet" href="assets/gallery.css">
+</head>
+<body>
+
+<div class="gallery" id="gallery"></div>
+
+<!-- Lightbox container -->
+<div id="lightbox-container"></div>
+
+<script>
+    // JavaScript to dynamically generate gallery and lightbox content
+    const galleryElement = document.getElementById('gallery');
+    const lightboxContainer = document.getElementById('lightbox-container');
+    const imageCount = 9; 
+
+    for (let i = 1; i <= imageCount; i++) {
+        // Create gallery thumbnails
+        const thumbnail = document.createElement('a');
+        thumbnail.href = `#img${i}`;
+        thumbnail.innerHTML = `<img src="assets/images/abeer/img${i}.jpeg" alt="Project ${i}">`;
+        galleryElement.appendChild(thumbnail);
+
+        // Create lightbox elements
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.id = `img${i}`;
+        lightbox.innerHTML = `
+            <a href="#img${i - 1 > 0 ? i - 1 : imageCount}" class="prev">&#10094;</a>
+            <img src="assets/images/abeer/img${i}.jpeg" alt="Project ${i}">
+            <a href="#img${i + 1 <= imageCount ? i + 1 : 1}" class="next">&#10095;</a>
+            <a href="index.html" class="close">&times;</a>
+        `;
+        lightboxContainer.appendChild(lightbox);
+    }
+</script>
+
+</body>
+</html>
